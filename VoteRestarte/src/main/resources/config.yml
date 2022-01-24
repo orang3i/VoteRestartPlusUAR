@@ -1,0 +1,20 @@
+#                                                      VOTE RESTART CONFIG
+#author : ORANG3I
+#version : 1.0
+
+#in the value field below enter 1 or 2 , 1 for using  [restart when given number of players vote] 2 for  [restart when given percentage of players vote]
+restart mode :
+  value :
+
+#in the value field enter the number of votes needed to restart when the needed number of votes are cast the server will restart
+number of votes needed to restart:
+  value : 3
+
+#in the value field below enter 25 or 50 or 75 or 100 if that percentage of players vote server will restart
+percentage of votes needed to restart :
+  value :
+
+#in the value field below enter the command you want to run as restart command the default command is "restart" you can leave it as it is it that is your restart command
+restart command:
+  value : restart
+

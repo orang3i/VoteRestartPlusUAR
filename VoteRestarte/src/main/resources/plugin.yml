@@ -1,0 +1,6 @@
+name: VoteRestart
+version: '${project.version}'
+main: com.orang3i.voterestart
+api-version: 1.18
+authors: [ ORANG3I ]
+description: a plugin to restart server by vote
