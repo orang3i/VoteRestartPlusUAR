@@ -13,7 +13,9 @@ public final class voterestart extends JavaPlugin {
         System.out.println("orange is proe");
 
         saveDefaultConfig();
-        new restartvote(this);
+        getServer().getPluginManager().registerEvents(new RestartVote_UAR(this) , this);
+        getServer().getPluginManager().registerEvents(new Voting(this) , this);
+
     }
 
     @Override
