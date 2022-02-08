@@ -1,4 +1,4 @@
-package com.orang3i;
+package com.orang3i.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;

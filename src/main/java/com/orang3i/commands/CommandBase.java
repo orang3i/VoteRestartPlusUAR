@@ -1,6 +1,7 @@
-package com.orang3i;
+package com.orang3i.commands;
 
 
+import com.orang3i.RestartVoteMain;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -117,7 +118,7 @@ public  abstract class  CommandBase  extends BukkitCommand implements CommandExe
         String permisssion = getPermission() ;
 
         if(permisssion != null && !sender.hasPermission(permisssion)) {
-            Msg.send(sender , "&c you do not have permission to run this command bozo");
+            Msg.send(sender , "please wait before clicking this again");
             return  true;
         }
 
@@ -126,14 +127,14 @@ public  abstract class  CommandBase  extends BukkitCommand implements CommandExe
             Player player = (Player) sender ;
             if (delayedPlayers.contains(player.getName())){
 
-                Msg.send(player , "this command can be used by you only after the next restart");
+                Msg.send(player , "please wait before clicking this again");
 
                 return  true;
             }
 
             delayedPlayers.add(player.getName());
 
-            Bukkit.getScheduler().scheduleSyncDelayedTask(voterestart.getInstance(), ()-> {
+            Bukkit.getScheduler().scheduleSyncDelayedTask(RestartVoteMain.getInstance(), ()-> {
 
                 delayedPlayers.remove(player.getName());
 
